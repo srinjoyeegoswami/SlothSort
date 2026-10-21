@@ -32,6 +32,7 @@ import {
   generateSandbox,
   undoSingle,
   undoAll,
+  IS_DEMO,
   type StatusResponse,
   type HistoryRecord,
 } from './api';
@@ -183,6 +184,14 @@ export default function App() {
 
   return (
     <div className="min-h-screen bg-noise" style={{ background: 'var(--color-surface)' }}>
+      {/* ── Demo Mode Banner ── */}
+      {IS_DEMO && (
+        <div className="w-full bg-amber-500/20 text-amber-300 text-center text-sm py-2">
+          🦥 Demo mode: sample data. The real app runs 100% locally with Ollama.{' '}
+          <a className="underline" href="https://github.com/srinjoyeegoswami/SlothSort">Get the code</a>
+        </div>
+      )}
+
       {/* ── Feedback Toast ── */}
       {actionFeedback && (
         <div className="fixed top-4 right-4 z-50 animate-slide-up">
