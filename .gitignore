@@ -1,0 +1,11 @@
+﻿__pycache__/
+*.pyc
+.venv/
+venv/
+node_modules/
+dist/
+sloth_config.json
+ledger.json
+demo_messy_folder/
+sorted_output/
+.env
